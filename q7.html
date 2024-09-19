@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Images with Picture Element</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Responsive Images Example</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="small.jpg" width="600" height="400">
+            <source media="(min-width: 601px)" srcset="large.jpg" width="1200" height="800">
+            <img src="https://i.pinimg.com/236x/76/d0/26/76d0264c93a41f4a018309406ecd7050.jpg" alt="Description of the image" width="1200" height="800">
+        </picture>
+        <p>This image changes based on the screen size.</p>
+    </div>
+</body>
+</html>
